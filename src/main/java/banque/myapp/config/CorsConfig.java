@@ -9,7 +9,10 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**") // Autorise toutes les routes sous /api
-                .allowedOrigins("http://localhost:4200") // Autorise Angular
+                .allowedOrigins(
+                        "http://localhost:4200",
+                        "https://taf-taf.vercel.app"
+                ) // Autorise Angular
                 .allowedMethods("GET", "POST", "PUT", "DELETE") // Méthodes HTTP permises
                 .allowedHeaders("*") // Tous les en-têtes
                 .allowCredentials(true); // Optionnel, si tu utilises des cookies

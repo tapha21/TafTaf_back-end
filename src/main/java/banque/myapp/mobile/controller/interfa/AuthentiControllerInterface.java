@@ -13,6 +13,6 @@ import java.util.Map;
 public interface AuthentiControllerInterface {
     @PostMapping("/login")
     ResponseEntity<Map<String, Object>> login(@RequestBody LoginRequestDto request);
-    @PostMapping("/auth/register")
+    @PostMapping("/register")
      ResponseEntity<Map<String, Object>> saveUser(@RequestBody RegisterRequestDto dto);
 }
